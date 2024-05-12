@@ -7,14 +7,39 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+        
         <Button x:Name="BtnScan" Content="Scan the system" 
-                Click="BtnScan_Click" Width="120" Height="30" Margin="41,130,639,274"/>
-        <ListBox x:Name="DriveList" Width="120" Height="100" Margin="41,217,639,117" SelectionChanged="DriveList_SelectionChanged"
+                Click="BtnScan_Click" Width="120" Height="30" 
+                Grid.Column="0" Grid.Row="0"/>
+       
+        <ListBox x:Name="DriveList" 
+                 Grid.Column="0" Grid.Row="1" Margin="7"
+                 SelectionChanged="DriveList_SelectionChanged"
    />
-        <ListBox x:Name="DriveInfoList" Margin="260,217,349,54"
+        <ListBox x:Name="DriveInfoList"  Margin="7"
+                  Grid.Column="1" Grid.Row="1"
 />
 
-        <ListBox x:Name="InfoList" Margin="538,217,71,54" SelectionChanged="InfoList_SelectionChanged"
+        <ListBox x:Name="InfoList" 
+                   Grid.Column="2" Grid.Row="1" Margin="7"
+                 SelectionChanged="InfoList_SelectionChanged"
 />
+        <ListBox x:Name="Mylist" Margin="7"
+                  Grid.Column="3" Grid.Row="1"/>
+
+        <ListBox x:Name="Mylist2" Margin="7"
+              Grid.Column="4" Grid.Row="1"/>
+        
     </Grid>
 </Window>
