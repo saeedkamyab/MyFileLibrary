@@ -7,6 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Button x:Name="BtnScan" Content="Scan the system" 
+                Click="BtnScan_Click" Width="120" Height="30" Margin="41,130,639,274"/>
+        <ListBox x:Name="DriveList" Width="120" Height="100" Margin="41,217,639,117" SelectionChanged="DriveList_SelectionChanged"
+   />
+        <ListBox x:Name="DriveInfoList" Margin="260,217,349,54"
+/>
 
+        <ListBox x:Name="InfoList" Margin="538,217,71,54" SelectionChanged="InfoList_SelectionChanged"
+/>
     </Grid>
 </Window>
